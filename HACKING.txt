@@ -1,0 +1,15 @@
+==============================
+Developing icemac.mathexercise
+==============================
+
+:Author:
+    `Michael Howitz`_ <icemac@gmx.net>
+
+:PyPI page:
+    http://pypi.python.org/pypi/icemac.mathexercise/
+
+:Issue tracker:
+    https://bitbucket.org/icemac/icemac.mathexercise/issues
+
+:Source code:
+    https://bitbucket.org/icemac/icemac.mathexercise/src

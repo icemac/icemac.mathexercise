@@ -1,0 +1,8 @@
+==================================
+Change log for icemac.mathexercise
+==================================
+
+0.1 (unreleased)
+================
+
+* Initial release.
