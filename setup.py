@@ -1,4 +1,4 @@
-# Copyright (c) 2014 gocept gmbh & co. kg
+# Copyright (c) 2014 Michael Howitz
 # See also LICENSE.txt
 
 # This should be only one line. If it must be multi-line, indent the second
@@ -30,6 +30,7 @@ setup(
         },
 
     entry_points={
+        'console_scripts': 'mathexercise.txt=icemac.mathexercise.main:txt',
         },
 
     author='gocept <mail@gocept.com>',
