@@ -30,7 +30,10 @@ setup(
         },
 
     entry_points={
-        'console_scripts': 'mathexercise.txt=icemac.mathexercise.main:txt',
+        'console_scripts': [
+            'mathexercise.txt=icemac.mathexercise.txt:main',
+            'mathexercise.odt=icemac.mathexercise.main:odt',
+            ]
         },
 
     author='gocept <mail@gocept.com>',
