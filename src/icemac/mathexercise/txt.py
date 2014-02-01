@@ -5,15 +5,15 @@ from .model import generate_problems
 
 def render(count, min, max):
     problems = generate_problems(count, min, max)
-    print('Aufgaben')
-    print('========')
-    for i, p in enumerate(problems):
-        print(p.render_problem())
+    render_block('Aufgaben', problems, False)
+    render_block('Lösungen', problems, True)
 
-    print('Lösungen')
-    print('========')
+
+def render_block(text, problems, show_solution):
+    print(text)
+    print('=' * len(text))
     for i, p in enumerate(problems):
-        print(p.render_problem(True))
+        print('{}) {}'. format(i+1, p.render(show_solution)))
 
 
 def main():

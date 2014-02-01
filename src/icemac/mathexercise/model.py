@@ -22,7 +22,7 @@ class Operation:
             return False
         return True
 
-    def render_problem(self, with_solution=False):
+    def render(self, with_solution=False):
         format = '{} {} {} ='
         args = (self.a, self.symbol, self.b)
         if with_solution:

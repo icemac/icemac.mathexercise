@@ -32,7 +32,7 @@ setup(
     entry_points={
         'console_scripts': [
             'mathexercise.txt=icemac.mathexercise.txt:main',
-            'mathexercise.odt=icemac.mathexercise.main:odt',
+            'mathexercise.odt=icemac.mathexercise.odt:main',
             ]
         },
 
