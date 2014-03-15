@@ -3,7 +3,8 @@ from __future__ import unicode_literals
 from .main import get_parser
 from .model import generate_problems
 from odf.opendocument import OpenDocumentText
-from odf.style import Style, TextProperties
+from odf.style import Style, TextProperties, PageLayout, PageLayoutProperties
+from odf.style import MasterPage
 from odf.text import H, P
 
 
@@ -17,6 +18,17 @@ class ExcercisesDoc:
 
     def create_doc(self):
         doc = OpenDocumentText()
+
+        # Page layout: A4
+        pagelayout = PageLayout(name="A4")
+        doc.automaticstyles.addElement(pagelayout)
+        pagelayout.addElement(PageLayoutProperties(
+            margin="2cm", pageheight="297mm", pagewidth="210mm",
+            printorientation="portrait"))
+        # Use page layout on master page, to set it:
+        masterpage = MasterPage(name="Standard", pagelayoutname="A4")
+        doc.masterstyles.addElement(masterpage)
+
         # Styles
         s = doc.styles
         self.h1style = Style(name="Heading 1", family="paragraph")
