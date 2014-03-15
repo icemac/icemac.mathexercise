@@ -38,11 +38,12 @@ class ExcercisesDoc:
         self.render_subblock(doc, num, problems, 'Lösungen', True)
 
     def render_subblock(self, doc, num, problems, text, show_solution):
+        base = (num - 1) * 10 + 1
         doc.text.addElement(
             H(outlinelevel=1, stylename=self.h1style,
               text="{} Teil {}".format(text, num)))
         for i, p in enumerate(problems):
-            p = P(text="{}) {}".format(num + i, p.render(show_solution)))
+            p = P(text="{}) {}".format(base + i, p.render(show_solution)))
             doc.text.addElement(p)
         doc.text.addElement(P())
 
