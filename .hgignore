@@ -1,6 +1,8 @@
 syntax: glob
 
+*.egg-info
 *.pyc
+*.sublime-workspace
 .installed.cfg
 bin
 build
@@ -10,4 +12,3 @@ doc/_api
 eggs
 local.cfg
 parts
-*.egg-info
